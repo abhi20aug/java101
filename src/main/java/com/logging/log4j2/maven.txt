@@ -1,0 +1,58 @@
+https://www.scalyr.com/blog/maven-log4j2-project/
+
+
+<dependencies>
+  <dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-api</artifactId>
+    <version>2.13.0</version>
+  </dependency>
+  <dependency>
+    <groupId>org.apache.logging.log4j</groupId>
+    <artifactId>log4j-core</artifactId>
+    <version>2.13.0</version>
+  </dependency>
+</dependencies>
+
+
+As you can see, only the messages with the “error” and “fatal” logging levels were displayed,
+even though we’ve logged using all of the logging levels available in Log4j2. What’s happening?
+
+
+Adding a Custom Configuration for Log4j2
+------------------
+Log4j2’s custom configuration isn’t enough for most real use cases.
+After all, you probably want to log to more useful targets than the console.
+You’ll also want to log using the other logging levels.
+So, now, we’re going to see how to configure Log4j2 beyond its default configurations.
+
+Log4j2, like many other logging frameworks, can be configured both programmatically
+but also via configuration files.
+For this tutorial, we’re going to go with the configuration file approach.
+We’re going to create a minimum viable Log4j2 using an XML file, which is one of the formats that the framework supports.
+
+Creating the Config File
+---------------------------
+To begin, go to the “Project” window.
+Under “src,” right-click the “main” directory,
+go to “New,” and then “Directory.”
+You’ll see a new screen prompting you for the new directory’s name.
+Click on “resources,” under “Maven Source Directories,” like in the following image:
+
+
+What has happened? Explaining the Configuration File
+------------------------------------------------------------
+Take a closer look at our configuration file.
+It starts by defining two appenders, one called “FileAppender,”
+and the other called “ConsoleAppender.”
+
+But what is an appender?
+An appender is the component that effectively writes the log message to its destination.
+The first appender defines stdout as its target, while the second defines a pattern for a file name.
+In other words, the first appender logs to the standard output while the second one logs to a file.
+
+The file then proceeds to define a logger.
+The logger is responsible for actually logging the messages that get passed to it.
+Each logger can reference one or more appenders, and that’s exactly what’s happening here.
+The logger references both appenders, so when it’s called, it’s going to log both to the standard output and to the logfile.
+
