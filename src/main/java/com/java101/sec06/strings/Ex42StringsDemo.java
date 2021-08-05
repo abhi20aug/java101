@@ -1,4 +1,4 @@
-package com.java101.sec6.strings;
+package com.java101.sec06.strings;
 
 import java.sql.Struct;
 
