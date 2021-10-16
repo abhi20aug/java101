@@ -5,7 +5,7 @@ public class Example232_2 {
     public static void main(String[] args) {
 
         //array of objects
-        Object obj[] = new Object[3];
+        Object[] obj = new Object[3];
 
         obj[0] = "Hi";
         obj[1] = "abhishek";

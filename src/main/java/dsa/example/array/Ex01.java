@@ -4,7 +4,7 @@ public class Ex01 {
 
     public static void main(String[] args) {
 
-        int a[] ={};
+        int[] a ={};
         int c[] ={1,2,3};
         int b[] ={1,2,3};
 
