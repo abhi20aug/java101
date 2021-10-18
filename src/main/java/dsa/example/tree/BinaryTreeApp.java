@@ -45,5 +45,11 @@ public class BinaryTreeApp {
         System.out.print("\n inOrder Traversal: " );
         inOrder.inOrderTraversal(root);
 
+        TreeTraversalPreOrderNR preOrderNR = new TreeTraversalPreOrderNR();
+        System.out.println("\n preOrder iterative");
+        preOrderNR.preOrder(root);
+
+        TreeTraversalINOrderNR inOrderNR = new TreeTraversalINOrderNR();
+        inOrderNR.inOrder(root);
     }
 }
