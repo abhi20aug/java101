@@ -51,5 +51,7 @@ public class BinaryTreeApp {
 
         TreeTraversalINOrderNR inOrderNR = new TreeTraversalINOrderNR();
         inOrderNR.inOrder(root);
+
+
     }
 }
