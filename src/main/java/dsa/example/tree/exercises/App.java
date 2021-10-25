@@ -7,11 +7,18 @@ public class App {
         Node root = tree.getTree();
 
         RecursiveTraversal recursiveTraversal = new RecursiveTraversal();
+
+//        System.out.println("\n");
+//        recursiveTraversal.preOrder(root);
+//
+//        System.out.println("\n");
+//        recursiveTraversal.inOrder(root);
+//
+//        System.out.println("\n");
+//        recursiveTraversal.postOrder(root);
+
         System.out.println("\n");
-        recursiveTraversal.preOrder(root);
-        System.out.println("\n");
-        recursiveTraversal.inOrder(root);
-        System.out.println("\n");
-        recursiveTraversal.postOrder(root);
+        TreeOperations.countNodes(root);
+
     }
 }
