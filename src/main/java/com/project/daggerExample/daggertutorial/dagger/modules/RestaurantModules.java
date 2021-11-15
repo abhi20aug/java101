@@ -44,6 +44,7 @@ public abstract class RestaurantModules {
     static Cook provideCook(){
         return new Cook();
     }
+
     @RestaurantScope
     @Provides
     static Waiter provideWaiter(Cook cook){

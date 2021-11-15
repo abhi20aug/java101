@@ -16,8 +16,10 @@ import javax.inject.Singleton;
 })
 public interface RestaurantComponent {
 
+    /* these are dependencies which has other dependencies */
     Restaurant restaurant();
 
+    /* these are dependencies which has other dependencies */
     Manager manager();
 
 }
